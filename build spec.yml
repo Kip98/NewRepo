@@ -7,14 +7,13 @@ phases:
         - mvn clean package
   
   post_build:
-  
-   commands:
-   
-    - echo build complete successfully
+     commands:
+          - echo build complete successfully
     artifacts:
-    files:
-    - target/test.jar
-    discard-paths:yes
+        files:
+       - target/test.jar
+       
+       - discard-paths:yes
     
     
   
