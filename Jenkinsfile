@@ -5,7 +5,7 @@ pipeline {
       parallel {
         stage('tools') {
           steps {
-            sh '''mvn build
+            sh '''mvn --version
 '''
           }
         }
