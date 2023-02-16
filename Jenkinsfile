@@ -2,9 +2,20 @@ pipeline {
   agent any
   stages {
     stage('tools') {
-      steps {
-        sh '''mvn build
+      parallel {
+        stage('tools') {
+          steps {
+            sh '''mvn build
 '''
+          }
+        }
+
+        stage('check files') {
+          steps {
+            fileExists 'pom.xml'
+          }
+        }
+
       }
     }
 
