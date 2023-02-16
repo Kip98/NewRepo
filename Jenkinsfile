@@ -4,8 +4,7 @@ pipeline {
     stage('tools') {
       steps {
         sh '''mvn --version
-git --version
-java -version'''
+'''
       }
     }
 
