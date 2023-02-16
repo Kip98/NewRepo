@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('tools') {
       steps {
-        sh '''mvn --version
+        sh '''mvn install
 '''
       }
     }
